@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>邀请</title>
+</head>
+<script>
+    var pxPerRem = document.getElementsByTagName("html")[0].clientWidth / 10;
+    window.addEventListener("resize", function() {
+        document.getElementsByTagName("html")[0].style.fontSize = pxPerRem + "px";
+        document.body.style.height = window.innerHeight + "px";
+    });
+    document.getElementsByTagName("html")[0].style.fontSize = pxPerRem + "px";
+
+    // document.addEventListener('touchstart', disableScroll, {passive: false})
+    // document.addEventListener('touchmove', disableScroll, {passive: false})
+    // document.addEventListener('touchend', disableScroll, {passive: false})
+
+    // function disableScroll(e) {
+        // e.preventDefault()
+    // }
+</script>
+<style type="text/css">
+    * {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-font-smoothing: antialiased;
+        -webkit-touch-callout: none;
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    img {
+        -webkit-touch-callout: default
+    }
+
+    div{
+        -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+        -webkit-user-select:none; /*webkit浏览器*/
+        -khtml-user-select:none; /*早期浏览器*/
+        -moz-user-select:none; /*火狐*/
+        -ms-user-select:none;  /*IE10*/
+        user-select:none;
+    }
+
+    input{
+        -webkit-user-select: auto;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        position: relative;
+        background-color: white;
+        background-size: 100% auto;
+        overflow: hidden;
+    }
+
+    .main {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+
+</style>
+<body>
+    <div id="main" style="width: 10rem;height: 100%;;background-color: #F4F4F4;overflow-y: auto;overflow-x: hidden;">
+        <div style="width: 10rem;height: 19.306666667rem;background: url(images/bg.png) no-repeat center center / 100% 100%;position: relative;">
+            <div style="width: 10rem;padding-top: 2.453333333rem;font-size: 0.64rem;font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;color: #FFFFFF;text-align: center;">邀请好友 多重奖励</div>
+            <div style="width: 10rem;font-size: 0.48rem;font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;color: #FFFFFF;padding-top: 0.1866666667rem;text-align: center;">邀请享提成</div>
+
+            <div style="width: 10rem;margin-top: 1.013333333rem;padding: 0 0.4rem;">
+                <div style="width: 100%; height: 100%;background-color: white;border-radius: 0.1066666667rem;">
+                    <div style="width: 100%;padding-top: 0.56rem;font-size: 0.3733333333rem;font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;color: #E07AE0;text-align: center;">奖励</div>
+
+                    <div style="padding-left: 0.5866666667rem; width: 100%;padding-top: 1.12rem;font-size: 0.32rem;font-family: PingFangSC-Regular, PingFang SC;font-weight: 500;color: #333333;">1.邀请奖励100金币</div>
+                    <div style="padding-left: 0.5866666667rem; width: 100%;padding-top: 0.2666666667rem;font-size: 0.32rem;font-family: PingFangSC-Regular, PingFang SC;font-weight: 500;color: #333333;">2.享受邀请用户的提成</div>
+                    <div style="padding-left: 0.5866666667rem; width: 100%;padding-top: 0.2666666667rem;font-size: 0.32rem;font-family: PingFangSC-Regular, PingFang SC;font-weight: 500;color: #333333;">3.邀请用户所奖励金额部分可用于提现</div>
+
+                    <div style="width: 100%;height: 1.493333333rem;padding: 0 1.066666667rem;display: flex;flex-direction: row;justify-content: space-between;margin-top: 0.6933333333rem;">
+                        <div style="height: 100%;width: 3.146666667rem;background-color:#F2A2FF;border-radius: 0.1066666667rem;">
+                            <div style="font-size: 0.3733333333rem;font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;color: #FFFFFF;padding-top: 0.2133333333rem;width: 100%;text-align:center;">累计奖励</div>
+                            <div style="font-size: 0.4266666667rem;font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;color: #FFFFFF;width: 100%;text-align:center;">0</div>
+                        </div>
+                        <div style="height: 100%;width: 3.146666667rem;background-color:#F2A2FF;border-radius: 0.1066666667rem;">
+                            <div style="font-size: 0.3733333333rem;font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;color: #FFFFFF;padding-top: 0.2133333333rem;width: 100%;text-align:center;">邀请人数</div>
+                            <div style="font-size: 0.4266666667rem;font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;color: #FFFFFF;width: 100%;text-align:center;">0</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.2rem;margin-bottom: 0.9333333333rem; margin-left: 0.6133333333rem;margin-right: 0.6133333333rem;">
+                        <div style="width: 100%;height: 2rem;background-color: white;">
+                            <div id="inviteButton" style="width: 100%;height: 1.066666667rem;line-height: 1.066666667rem;background-color: #9854F5;border-radius: 0.08rem;color: white;font-family: PingFangSC-Medium, PingFang SC;font-weight: 500;font-size: 0.4266666667rem;text-align: center;">邀请好友</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+
+document.getElementById('inviteButton').addEventListener('click', function() {
+    let type = getQueryString("type");
+    if (type == "Android") {
+        window.tf.onInvite();
+    }else {
+        window.webkit.messageHandlers.tf.postMessage({
+            method: "onInvite",
+            params: JSON.stringify(''),
+        });
+    }
+})
+
+</script>
+</html>
